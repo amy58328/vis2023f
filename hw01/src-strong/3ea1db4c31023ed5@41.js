@@ -3,13 +3,13 @@ md`# HW1 strong baseline`
 )}
 
 function _data(__query,FileAttachment,invalidation){return(
-__query(FileAttachment("data.csv"),{from:{table:"data"},sort:[],slice:{to:null,from:null},filter:[],select:{columns:null}},invalidation)
+__query(FileAttachment("data@1.csv"),{from:{table:"data"},sort:[],slice:{to:null,from:null},filter:[],select:{columns:null}},invalidation)
 )}
 
 async function _3(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業一",
       fill: "#164863",
@@ -23,7 +23,7 @@ Plot.plot({
 async function _4(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業二",
       fill: "#427D9D",
@@ -37,7 +37,7 @@ Plot.plot({
 async function _5(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業三",
       fill: "#9BBEC8",
@@ -51,7 +51,7 @@ Plot.plot({
 async function _6(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業四",
       fill: "#86A789",
@@ -65,7 +65,7 @@ Plot.plot({
 async function _7(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業五",
       fill: "#B2C8BA",
@@ -79,7 +79,7 @@ Plot.plot({
 async function _8(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業六",
       fill: "#D2E3C8",
@@ -93,7 +93,7 @@ Plot.plot({
 async function _9(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業七",
       fill: "#EBF3E8",
@@ -107,7 +107,7 @@ Plot.plot({
 async function _10(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業八",
       fill: "#04364A",
@@ -121,7 +121,7 @@ Plot.plot({
 async function _11(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業九",
       fill: "#176B87",
@@ -135,7 +135,7 @@ Plot.plot({
 async function _12(Plot,FileAttachment){return(
 Plot.plot({
   marks: [
-    Plot.barY(await FileAttachment("data.csv").csv({ typed: "auto" }), {
+    Plot.barY(await FileAttachment("data@1.csv").csv({ typed: "auto" }), {
       x: "學號",
       y: "作業十",
       fill: "#64CCC5",
@@ -150,7 +150,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["data.csv", {url: new URL("./files/ac8fbe34325b2b4528f8800e1514bc3400dbcbbb54dc76aa075eb862fae8178416590c9a99156f6c08f9a3442644b29a56de676afeac796fbc2f746a92b30966.csv", import.meta.url), mimeType: "text/csv", toString}]
+    ["data@1.csv", {url: new URL("./data.csv", import.meta.url), mimeType: "text/csv", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
