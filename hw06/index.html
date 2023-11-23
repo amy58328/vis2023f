@@ -178,14 +178,33 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/vis2023f/hw<span style="color:red;">06</span>/src/ 檔案夾。
+      該次作業程式碼，請放在 https://github.com/amy58328/vis2023f/hw<span style="color:red;">06</span>/src/ 檔案夾。
     </div>
   </div>
 
-  <!-- ------------------------------------------------>
+    <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      <h4>前往你的 Demo 網頁</h4>
+    </div>
+  </div>
+  
+  <!-- ------------------------------------------------> 
+  
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      <a href="https://amy58328.github.io/vis2023f/hw06/src/">https://amy58328.github.io/vis2023f/hw06/src/</a>
+      
+      
+      </div>
+  </div> 
+  <!-- <hr>------------------------------------------------> 
+  
+  
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      心得:<br/>
+      透過使用Observable製作圖表並進行美化，讓我感受到極大的成就滿足感。觀察數據的同時，能夠運用豐富的視覺效果提升圖表的美觀度，這使得資訊更加生動且容易理解。透過調整顏色、樣式和動畫效果，不僅讓數據更具吸引力，同時也提升了呈現資訊的效果。Observable為我提供了一個具有創意和彈性的平台，讓我在數據可視化的領域中體驗到了獨特的滿足感。
     </div>
   </div>
 
@@ -201,19 +220,53 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox1" checked>   
+            </input>          
+          </td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td>Simple baseline - 利用Plot完成堆疊柱狀圖 </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox2" checked>                      
+            </input>
+          </td>
+          <td id='m2'>1</td>
+          <td>Simple baseline - 加入Checkbox input使其可選擇呈現的資料集 </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox3" checked>
+            </input>
+          </td>
+          <td id='m3'>3</td>
+          <td>Medium baseline - 利用SVG完成堆疊柱狀圖(含Checkbox) </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox4" checked>
+            </input>
+          </td>
+          <td id='m4'>1</td>
+          <td>Medium baseline - 加入D3的過渡效果 </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox5" checked>
+            </input>
+          </td>
+          <td id='m5'>2</td>
+          <td>Strong baseline - 利用SVG製成的堆疊柱狀圖添加陰影效果 </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox6" checked>
+            </input>
+          </td>
+          <td id='m6'>1</td>
+          <td>Strong baseline - 添加滑鼠游標偵測效果 </td>
         </tr>
       </table>
     </div>
@@ -222,9 +275,14 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      
+      <!--<video id="video1" style="width:100%;max-width:100%;" controls="">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> </video> -->
+      <!-- <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF"
+  src="https://observablehq.com/embed/3b039b075022c35e?cell=*"></iframe>   -->\
+  <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF"
+  src="https://observablehq.com/embed/f4ef1316b7641835?cell=*"></iframe>
+
     </div>
   </div>
 
@@ -265,6 +323,18 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+    if (d3.select("#myCheckbox6").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
     }
 
     d3.select("#myTotal").html(score);    
